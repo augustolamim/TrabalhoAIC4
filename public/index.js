@@ -403,14 +403,14 @@ function handleInit(number){
 }
 
 function handleGameState(gameState){ 
-  if(!gameActive){
+  if(gameActive == false){
     return;
   }
   requestAnimationFrame(()=>paintGame(gameState));
 }
 
 function handleGameOver(data){ 
-  if(!gameActive){
+  if(gameActive == false){
     return;
   }
   if(data.winner === playerNumber){
